@@ -1,0 +1,16 @@
+Model,Average_Score,Equivalent_Models
+MONAI_UNEST,0.7593793588883753,
+MONAI_LHU-Net,0.9104618820027923,
+Vision_Language_U-Net_CLIP,0.8947503919449618,MONAI_SegVol
+nnU-Net_STU-Net,0.9407402049764642,"nnU-Net_ResEncL, nnU-Net_MedNeXt, nnU-Net_NexToU, _Diff-UNet, nnU-Net_U-Net"
+nnU-Net_ResEncL,0.9357228998586816,"nnU-Net_NexToU, nnU-Net_U-Net, nnU-Net_STU-Net"
+nnU-Net_MedNeXt,0.9340031418035615,"nnU-Net_NexToU, nnU-Net_U-Net, nnU-Net_STU-Net"
+MONAI_UNETR,0.5531831614983396,
+Vision_Language_Swin_UNETR_CLIP,0.9202867450192571,
+MONAI_SegVol,0.8913939318294584,Vision_Language_U-Net_CLIP
+MONAI_UCTransNet,0.7973320579191424,
+nnU-Net_NexToU,0.9340493584297738,"nnU-Net_U-Net, nnU-Net_STU-Net, nnU-Net_ResEncL, nnU-Net_MedNeXt"
+_SAM-Adapter,0.5159232542340485,
+_Diff-UNet,0.9308021622059761,nnU-Net_STU-Net
+MONAI_Swin_UNETR,0.7161369529886628,
+nnU-Net_U-Net,0.9355718796264451,"nnU-Net_STU-Net, nnU-Net_ResEncL, nnU-Net_MedNeXt, nnU-Net_NexToU"
