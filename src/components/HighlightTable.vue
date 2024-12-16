@@ -4,7 +4,7 @@
         <thead>
           <tr>
             <th>Model</th>
-            <th>Score</th>
+            <th>Average Score</th>
           </tr>
         </thead>
         <tbody>
@@ -24,30 +24,50 @@
   </template>
   
   <script>
+  import Papa from "papaparse";
+  
   export default {
     data() {
       return {
-        models: [
-        { model: "Model A", score: 95, similarModels: ["Model B", "Model C"] },
-        { model: "Model B", score: 88, similarModels: ["Model A"] },
-        { model: "Model C", score: 92, similarModels: ["Model A"] },
-        ],
-        highlightedModel: null,
+        models: [], // 存储解析后的CSV数据
+        highlightedModel: null, // 当前高亮的模型
       };
     },
+    mounted() {
+      this.loadCSVData();
+    },
     methods: {
+      // 加载 CSV 文件并解析数据
+      loadCSVData() {
+        Papa.parse("/dapatlas_results/aorta_summary.csv", {
+          download: true,
+          header: true,
+          complete: (result) => {
+            this.models = result.data.filter((row) => row.Model && row.Average_Score).map((row) => ({
+              model: row.Model,
+              score: parseFloat(row.Average_Score),
+              equivalentModels: row.Equivalent_Models
+                ? row.Equivalent_Models.split(",").map((m) => m.trim())
+                : [],
+            })).sort((a, b) => b.score - a.score);
+          },
+        });
+      },
+      // 设置高亮模型
       highlightModel(model) {
         this.highlightedModel = model;
       },
+      // 清除高亮状态
       clearHighlight() {
         this.highlightedModel = null;
       },
+      // 判断是否高亮
       isHighlighted(model) {
         if (!this.highlightedModel) return false;
-        const similarModels = this.models.find(
+        const current = this.models.find(
           (item) => item.model === this.highlightedModel
-        )?.similarModels;
-        return model === this.highlightedModel || similarModels?.includes(model);
+        );
+        return model === this.highlightedModel || current?.equivalentModels.includes(model);
       },
     },
   };
@@ -67,7 +87,8 @@
     transition: background-color 0.3s ease;
   }
   tr.highlighted {
-    background-color: #6f670c;
+    background-color: #ffd966; /* 更柔和的浅黄色 */
+    color: #333333; /* 深灰色文字，增加对比度 */
   }
   </style>
   
