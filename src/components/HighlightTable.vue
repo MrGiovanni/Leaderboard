@@ -1,10 +1,11 @@
-<template>
+   <template>
     <div>
+      <h3>{{ title }}</h3>
       <table>
         <thead>
           <tr>
             <th>Model</th>
-            <th>Average Score</th>
+            <th>DSC Score</th>
           </tr>
         </thead>
         <tbody>
@@ -27,6 +28,10 @@
   import Papa from "papaparse";
   
   export default {
+    props: {
+      filePath: String, // 动态指定CSV文件路径
+      title: String, // 表格标题
+    },
     data() {
       return {
         models: [], // 存储解析后的CSV数据
@@ -39,17 +44,20 @@
     methods: {
       // 加载 CSV 文件并解析数据
       loadCSVData() {
-        Papa.parse("/dapatlas_results/aorta_summary.csv", {
+        Papa.parse(this.filePath, {
           download: true,
           header: true,
           complete: (result) => {
-            this.models = result.data.filter((row) => row.Model && row.Average_Score).map((row) => ({
-              model: row.Model,
-              score: parseFloat(row.Average_Score),
-              equivalentModels: row.Equivalent_Models
-                ? row.Equivalent_Models.split(",").map((m) => m.trim())
-                : [],
-            })).sort((a, b) => b.score - a.score);
+            this.models = result.data
+              .filter((row) => row.Model && row.Average_Score)
+              .map((row) => ({
+                model: row.Model,
+                score: parseFloat(row.Average_Score),
+                equivalentModels: row.Equivalent_Models
+                  ? row.Equivalent_Models.split(",").map((m) => m.trim())
+                  : [],
+              }))
+              .sort((a, b) => b.score - a.score); // 按分数降序排序
           },
         });
       },
@@ -73,7 +81,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   table {
     border-collapse: collapse;
     width: 100%;
