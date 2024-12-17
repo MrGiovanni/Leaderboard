@@ -1,0 +1,20 @@
+Model,Average_Score,Equivalent_Models
+UNETR,0.8883666979063141,
+U-Net_CLIP,0.9240788745871636,"NexToU, Swin_UNETR_CLIP, SegVol"
+Diff-UNet,0.9312466988217498,"LHU-Net, nnU-Net_ResEncL, nnU-Net U-Net, MedFormer, UniSeg"
+LHU-Net,0.9301419297724312,"MedFormer, UniSeg, Diff-UNet"
+NexToU,0.9267516039002474,"Swin_UNETR_CLIP, SegVol, U-Net_CLIP"
+Swin_UNETR_CLIP,0.9219639548861692,"SegVol, U-Net_CLIP, NexToU"
+STU-Net H,0.9372551485546877,STU-Net B
+nnU-Net_ResEncL,0.9344900538584011,"MedNeXt, nnU-Net U-Net, MedFormer, STU-Net B, STU-Net L, UniSeg, Diff-UNet"
+SegVol,0.924978642679013,"U-Net_CLIP, NexToU, Swin_UNETR_CLIP"
+UNEST,0.9085754962891044,
+MedNeXt,0.9350739948326641,"MedFormer, STU-Net B, nnU-Net_ResEncL"
+nnU-Net U-Net,0.9334145456703521,"MedFormer, STU-Net B, Diff-UNet, nnU-Net_ResEncL"
+MedFormer,0.9335030375641244,"STU-Net B, UniSeg, Diff-UNet, LHU-Net, nnU-Net_ResEncL, MedNeXt, nnU-Net U-Net"
+Swin_UNETR,0.9046040261851367,
+STU-Net B,0.9348855510038,"STU-Net L, UniSeg, STU-Net H, nnU-Net_ResEncL, MedNeXt, nnU-Net U-Net, MedFormer"
+STU-Net L,0.9367460229230239,"nnU-Net_ResEncL, STU-Net B"
+UCTransNet,0.8186582816359904,
+UniSeg,0.9329558298429399,"Diff-UNet, LHU-Net, nnU-Net_ResEncL, MedFormer, STU-Net B"
+SAM-Adapter,0.8795602670434609,
