@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: './',
+  base: '/TouchStone_visualization/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
