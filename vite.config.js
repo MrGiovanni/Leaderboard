@@ -10,7 +10,8 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: process.env.NODE_ENV === 'production' ? '/TouchStone_visualization/' : '/',
+  // base: process.env.NODE_ENV === 'production' ? '/TouchStone_visualization/' : '/',
+  base: "/TouchStone_visualization/",
   build: {
     outDir: 'dist'
   },
