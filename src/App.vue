@@ -80,7 +80,7 @@ export default {
   methods: {
     loadData() {
       this.isLoading = true; // 开始加载
-      const filePath = `/${this.selectedDataset}/${this.selectedScoreType.toLowerCase()}/${this.selectedClass}_summary.csv`;
+      const filePath = `${import.meta.env.BASE_URL}${this.selectedDataset}/${this.selectedScoreType.toLowerCase()}/${this.selectedClass}_summary.csv`;
       console.log("加载文件路径:", filePath);
 
       Papa.parse(filePath, {
