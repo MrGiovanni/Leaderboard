@@ -5,6 +5,7 @@
       <table v-if="data.length > 0">
         <thead>
           <tr>
+            <th>Rank</th>
             <th>Model</th>
             <th>{{ scoreType }} Score</th>
           </tr>
@@ -17,6 +18,7 @@
             @mouseover="highlightModel(item.Model)"
             @mouseleave="clearHighlight"
           >
+            <td>{{ index + 1 }}</td>
             <td>{{ item.Model }}</td>
             <td>{{ item.Average_Score }}</td>
           </tr>
@@ -77,27 +79,94 @@
   </script>
   
   <style scoped>
+  /* 整体页面样式 */
+  div {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0; /* 浅灰文字颜色 */
+    background-color: #1e1e1e; /* 深色背景 */
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* 表格样式 */
   table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #2a2a2a; /* 表格背景颜色 */
+    border: 1px solid #444;
+    border-radius: 8px; /* 圆角边框 */
+    overflow: hidden; /* 隐藏溢出边角 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* 阴影效果 */
   }
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+  
+  th, td {
+    border: 1px solid #444;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #f0f0f0;
   }
-  tr {
+  
+  th {
+    background-color: #3a3a3a; /* 表头背景颜色 */
+    color: #f0f0f0;
+    text-transform: uppercase;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #313131; /* 奇偶行背景色 */
+  }
+  
+  tbody tr:hover {
+    background-color: #555555; /* 悬停时背景颜色 */
+    color: #ffffff;
     transition: background-color 0.3s ease;
   }
+  
   tr.highlighted {
-    background-color: #ffd966; /* 柔和高亮背景色 */
-    color: #333333; /* 字体颜色 */
+    background-color: #deb334 !important; /* 柔和高亮背景 */
+    color: #333333 !important;
+    font-weight: bold; /* 加粗文字 */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+  
+  select, label {
+    display: block;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #f0f0f0;
+  }
+  
+  select {
+    width: 50%;
+    padding: 8px 12px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  select:hover {
+    border-color: #888;
+  }
+  
   p {
     text-align: center;
     font-size: 16px;
     margin-top: 20px;
+    color: #ff8c00; /* 提示文字颜色 */
   }
   </style>
+  
   
