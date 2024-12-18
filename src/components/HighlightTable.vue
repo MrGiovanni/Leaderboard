@@ -14,13 +14,13 @@
           <tr
             v-for="(item, index) in data"
             :key="index"
-            :class="{ highlighted: isHighlighted(item.Model, item.Equivalent_Models) }"
+            :class="{ highlighted: isHighlighted(item.Model, item.No_Significant_Diff_Models) }"
             @mouseover="highlightModel(item.Model)"
             @mouseleave="clearHighlight"
           >
             <td>{{ index + 1 }}</td>
             <td>{{ item.Model }}</td>
-            <td>{{ item.Average_Score }}</td>
+            <td>{{ item.Median }}</td>
           </tr>
         </tbody>
       </table>
@@ -60,14 +60,14 @@
         this.highlightedModel = null;
       },
       // 判断是否需要高亮
-      isHighlighted(model, equivalentModels) {
+      isHighlighted(model, noSignificantDiffModels) {
         if (!this.highlightedModel) return false;
-  
-        // 解析 Equivalent_Models 为数组（如果存在）
-        const equivalents = equivalentModels
-          ? equivalentModels.split(",").map((m) => m.trim())
+
+        // 解析 No_Significant_Diff_Models 为数组（如果存在）
+        const equivalents = noSignificantDiffModels
+          ? noSignificantDiffModels.split(",").map((m) => m.trim())
           : [];
-  
+
         // 判断当前模型是否为高亮的模型或等效模型
         return (
           model === this.highlightedModel ||
@@ -75,6 +75,7 @@
         );
       },
     },
+
   };
   </script>
   
