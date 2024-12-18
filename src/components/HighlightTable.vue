@@ -7,7 +7,7 @@
           <tr>
             <th>Rank</th>
             <th>Model</th>
-            <th>{{ scoreType }} Score Median</th>
+            <th>{{ scoreType }}Median Score</th>
             <!-- <th>{{ scoreType }} Score Mean</th> -->
           </tr>
         </thead>
@@ -21,7 +21,7 @@
           >
             <td>{{ index + 1 }}</td>
             <td>{{ item.Model }}</td>
-            <td>{{ item.Median }}</td>
+            <td>{{ Number(item.Median*100).toFixed(1) }}</td>
             <!-- <td>{{ item.Mean }}</td> -->
           </tr>
         </tbody>
