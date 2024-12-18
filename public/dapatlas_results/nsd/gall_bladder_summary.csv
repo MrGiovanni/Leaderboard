@@ -1,16 +1,16 @@
 Model,Mean,Median,No_Significant_Diff_Models
 MONAI_UNEST,0.5044146593414681,0.5856996476650238,MONAI_Swin_UNETR
-MONAI_LHU-Net,0.687236256682952,0.7937736809253693,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, _Diff-UNet, nnU-Net_STU-Net, MONAI_SegVol, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
-Vision_Language_U-Net_CLIP,0.6396672226613256,0.7229422926902771,"MONAI_UCTransNet, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, MONAI_SegVol, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
-nnU-Net_STU-Net,0.6789997911437091,0.7714673280715942,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, _Diff-UNet, MONAI_SegVol, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
-nnU-Net_ResEncL,0.6878914007001307,0.7833161652088165,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, MONAI_SegVol, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
-nnU-Net_MedNeXt,0.6783528709050826,0.7759984731674194,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, MONAI_SegVol, Vision_Language_Swin_UNETR_CLIP"
+MONAI_LHU-Net,0.687236256682952,0.7937736809253693,"MONAI_UCTransNet, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, _Diff-UNet, nnU-Net_STU-Net, nnU-Net_MedNeXt"
+Vision_Language_U-Net_CLIP,0.6396672226613256,0.7229422926902771,"MONAI_UCTransNet, MONAI_SegVol, Vision_Language_Swin_UNETR_CLIP"
+nnU-Net_STU-Net,0.6789997911437091,0.7714673280715942,"MONAI_UCTransNet, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, _Diff-UNet, nnU-Net_MedNeXt"
+nnU-Net_ResEncL,0.6878914007001307,0.7833161652088165,"MONAI_UCTransNet, nnU-Net_U-Net, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, nnU-Net_MedNeXt"
+nnU-Net_MedNeXt,0.6783528709050826,0.7759984731674194,"MONAI_UCTransNet, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet"
 MONAI_UNETR,0.23893360261070656,0.24565100669860834,
-Vision_Language_Swin_UNETR_CLIP,0.6262123411535983,0.7074974477291107,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, MONAI_SegVol, nnU-Net_MedNeXt"
-MONAI_SegVol,0.6378621675058518,0.7233057022094727,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
-MONAI_UCTransNet,0.6621549796536711,0.7397651076316833,"Vision_Language_U-Net_CLIP, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, MONAI_SegVol, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
-nnU-Net_NexToU,0.6923394516792413,0.7721213400363922,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_ResEncL, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, MONAI_SegVol, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
+Vision_Language_Swin_UNETR_CLIP,0.6262123411535983,0.7074974477291107,"MONAI_SegVol, Vision_Language_U-Net_CLIP"
+MONAI_SegVol,0.6378621675058518,0.7233057022094727,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, Vision_Language_Swin_UNETR_CLIP"
+MONAI_UCTransNet,0.6621549796536711,0.7397651076316833,"Vision_Language_U-Net_CLIP, nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, MONAI_SegVol, nnU-Net_MedNeXt"
+nnU-Net_NexToU,0.6923394516792413,0.7721213400363922,"MONAI_UCTransNet, nnU-Net_U-Net, nnU-Net_ResEncL, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, nnU-Net_MedNeXt"
 _SAM-Adapter,0.10072010984493845,0.0986385270953178,
-_Diff-UNet,0.6969606003877693,0.7825990319252014,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, MONAI_SegVol, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
-MONAI_Swin_UNETR,0.5214056750036699,0.6018328964710236,"MONAI_UNEST, nnU-Net_U-Net"
-nnU-Net_U-Net,0.6808179807282048,0.7725978493690491,"MONAI_UCTransNet, Vision_Language_U-Net_CLIP, MONAI_LHU-Net, MONAI_SegVol, MONAI_Swin_UNETR, nnU-Net_MedNeXt, Vision_Language_Swin_UNETR_CLIP"
+_Diff-UNet,0.6969606003877693,0.7825990319252014,"nnU-Net_U-Net, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, nnU-Net_MedNeXt"
+MONAI_Swin_UNETR,0.5214056750036699,0.6018328964710236,MONAI_UNEST
+nnU-Net_U-Net,0.6808179807282048,0.7725978493690491,"MONAI_UCTransNet, nnU-Net_ResEncL, nnU-Net_NexToU, MONAI_LHU-Net, nnU-Net_STU-Net, _Diff-UNet, nnU-Net_MedNeXt"

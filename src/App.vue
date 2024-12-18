@@ -97,6 +97,7 @@ export default {
           } else {
             this.tableData = result.data
               .filter((row) => row.Model)
+              // .sort((a, b) => parseFloat(b.Mean) - parseFloat(a.Mean));
               .sort((a, b) => parseFloat(b.Median) - parseFloat(a.Median)); // 按分数降序排序
             console.log("tableData:", this.tableData);
           }
