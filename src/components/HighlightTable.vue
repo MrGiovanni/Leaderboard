@@ -27,7 +27,7 @@
         </tbody>
       </table>
       <!-- 数据为空时的提示 -->
-      <p v-else>暂无数据，请检查输入内容。</p>
+      <p v-else>No Data</p>
     </div>
   </template>
   
@@ -44,7 +44,7 @@
       },
       title: {
         type: String,
-        default: "模型分数表格",
+        default: "Model Score Table",
       },
     },
     data() {

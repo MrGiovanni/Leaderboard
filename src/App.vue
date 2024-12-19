@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <h1>模型分数可视化</h1>
+    <h1>Visualization of TouchStone Experiment Results</h1>
 
     <!-- 控制面板 -->
     <div class="control-panel">
       <div class="form-row">
-        <label>选择数据集：</label>
+        <label>Choose Dataset：</label>
         <select v-model="selectedDataset" @change="debouncedLoadData">
           <option value="dapatlas_results">Dapatlas Results</option>
           <option value="jhh_results">JHH Results</option>
@@ -14,7 +14,7 @@
       </div>
 
       <div class="form-row">
-        <label>选择类别：</label>
+        <label>Choose Class：</label>
         <select v-model="selectedClass" @change="debouncedLoadData">
           <option v-for="category in categories" :key="category" :value="category">
             {{ category }}
@@ -23,7 +23,7 @@
       </div>
 
       <div class="form-row">
-        <label>选择分数：</label>
+        <label>Choose Score：</label>
         <select v-model="selectedScoreType" @change="debouncedLoadData">
           <option value="dsc">DSC</option>
           <option value="nsd">NSD</option>
@@ -33,7 +33,7 @@
 
     <!-- 加载状态 -->
     <div v-if="isLoading" class="loading">
-      正在加载数据，请稍候...
+      Loading, waiting please...
     </div>
 
     <!-- 表格组件 -->
