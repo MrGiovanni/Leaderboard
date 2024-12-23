@@ -1,0 +1,16 @@
+Model_name,Median,95% CI,Likely_models,organization
+MONAI_UNEST,0.825000673532486,0.00 - 0.93,['MONAI_Swin_UNETR'],NVIDIA
+MONAI_LHU-Net,0.8907003402709961,0.00 - 0.94,"['nnU-Net_STU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'MONAI_UCTransNet', '_Diff-UNet']",UR
+Vision_Language_U-Net_CLIP,0.8738124668598175,0.00 - 0.93,"['Vision_Language_Swin_UNETR_CLIP', 'MONAI_SegVol', 'MONAI_UCTransNet', 'nnU-Net_NexToU', 'nnU-Net_U-Net']",CityU
+nnU-Net_STU-Net,0.8860193490982056,0.00 - 0.94,"['MONAI_LHU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'MONAI_UCTransNet', 'nnU-Net_NexToU', '_Diff-UNet', 'nnU-Net_U-Net']",Shanghai AI Lab
+nnU-Net_ResEncL,0.8863697946071625,0.00 - 0.93,"['MONAI_LHU-Net', 'nnU-Net_STU-Net', 'nnU-Net_MedNeXt', 'MONAI_UCTransNet', '_Diff-UNet', 'nnU-Net_U-Net']",DKFZ
+nnU-Net_MedNeXt,0.8854203820228577,0.00 - 0.94,"['MONAI_LHU-Net', 'nnU-Net_STU-Net', 'nnU-Net_ResEncL', 'MONAI_UCTransNet', 'nnU-Net_NexToU', '_Diff-UNet', 'nnU-Net_U-Net']",DKFZ
+MONAI_UNETR,0.6242595016956329,0.00 - 0.86,[],NVIDIA
+Vision_Language_Swin_UNETR_CLIP,0.868069589138031,0.00 - 0.93,"['Vision_Language_U-Net_CLIP', 'MONAI_SegVol', 'nnU-Net_NexToU', 'nnU-Net_U-Net']",CityU
+MONAI_SegVol,0.8714009523391724,0.00 - 0.93,"['Vision_Language_U-Net_CLIP', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU', 'nnU-Net_U-Net']",BAAI
+MONAI_UCTransNet,0.8784161806106567,0.00 - 0.95,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'nnU-Net_STU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'nnU-Net_NexToU', '_Diff-UNet', 'nnU-Net_U-Net']",CityU
+nnU-Net_NexToU,0.876052737236023,0.00 - 0.93,"['Vision_Language_U-Net_CLIP', 'nnU-Net_STU-Net', 'nnU-Net_MedNeXt', 'Vision_Language_Swin_UNETR_CLIP', 'MONAI_SegVol', 'MONAI_UCTransNet', 'nnU-Net_U-Net']",HIT
+_SAM-Adapter,0.3841056823730469,0.00 - 0.68,[],Duke
+_Diff-UNet,0.8878808617591858,0.00 - 0.93,"['MONAI_LHU-Net', 'nnU-Net_STU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'MONAI_UCTransNet']",HKUST
+MONAI_Swin_UNETR,0.8376145362854004,0.00 - 0.93,['MONAI_UNEST'],NVIDIA
+nnU-Net_U-Net,0.8827921152114868,0.00 - 0.94,"['Vision_Language_U-Net_CLIP', 'nnU-Net_STU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'Vision_Language_Swin_UNETR_CLIP', 'MONAI_SegVol', 'MONAI_UCTransNet', 'nnU-Net_NexToU']",N/A

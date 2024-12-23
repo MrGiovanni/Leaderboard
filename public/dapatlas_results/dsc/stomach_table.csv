@@ -1,0 +1,16 @@
+Model_name,Median,95% CI,Likely_models,organization
+MONAI_UNEST,0.9291827082633972,0.64 - 0.96,[],NVIDIA
+MONAI_LHU-Net,0.9580243229866028,0.81 - 0.98,"['Vision_Language_U-Net_CLIP', 'nnU-Net_STU-Net', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU', '_Diff-UNet', 'nnU-Net_U-Net']",UR
+Vision_Language_U-Net_CLIP,0.9572213292121888,0.83 - 0.97,"['MONAI_LHU-Net', 'nnU-Net_STU-Net', 'Vision_Language_Swin_UNETR_CLIP', 'MONAI_SegVol', 'nnU-Net_NexToU', '_Diff-UNet']",CityU
+nnU-Net_STU-Net,0.9595210552215576,0.82 - 0.98,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', '_Diff-UNet', 'nnU-Net_U-Net']",Shanghai AI Lab
+nnU-Net_ResEncL,0.9620999097824096,0.84 - 0.98,['nnU-Net_MedNeXt'],DKFZ
+nnU-Net_MedNeXt,0.963874340057373,0.83 - 0.98,['nnU-Net_ResEncL'],DKFZ
+MONAI_UNETR,0.8341947793960571,0.14 - 0.94,[],NVIDIA
+Vision_Language_Swin_UNETR_CLIP,0.9559297561645508,0.82 - 0.97,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'MONAI_SegVol', 'nnU-Net_NexToU']",CityU
+MONAI_SegVol,0.9543637633323668,0.82 - 0.98,"['Vision_Language_U-Net_CLIP', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU']",BAAI
+MONAI_UCTransNet,0.946076273918152,0.77 - 0.97,[],CityU
+nnU-Net_NexToU,0.9565361738204956,0.78 - 0.98,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'Vision_Language_Swin_UNETR_CLIP', 'MONAI_SegVol']",HIT
+_SAM-Adapter,0.8879098296165466,0.56 - 0.94,[],Duke
+_Diff-UNet,0.9589501619338988,0.81 - 0.98,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'nnU-Net_STU-Net', 'nnU-Net_U-Net']",HKUST
+MONAI_Swin_UNETR,0.9205259084701538,0.35 - 0.96,[],NVIDIA
+nnU-Net_U-Net,0.95911705493927,0.83 - 0.98,"['MONAI_LHU-Net', 'nnU-Net_STU-Net', '_Diff-UNet']",N/A

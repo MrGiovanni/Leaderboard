@@ -1,0 +1,20 @@
+Model_name,Median,95% CI,Likely_models,organization
+MONAI_UNEST,0.9285764694213867,0.00 - 0.98,[],NVIDIA
+MONAI_LHU-Net,0.965597003698349,0.00 - 0.99,"['Vision_Language_U-Net_CLIP', 'nnU-Net_UniSeg', 'nnU-Net_STU-Net_H', 'nnU-Net_NexToU', 'nnU-Net_STU-Net_L']",UR
+Vision_Language_U-Net_CLIP,0.9660634696483612,0.00 - 0.99,"['MONAI_LHU-Net', 'nnU-Net_STU-Net_H', 'nnU-Net_NexToU', 'nnU-Net_STU-Net_L']",CityU
+nnU-Net_UniSeg,0.9633944630622864,0.09 - 0.98,"['MONAI_LHU-Net', 'nnU-Net_STU-Net_H', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU']",Collecting Data
+nnU-Net_ResEncL,0.9730521142482758,0.21 - 0.99,"['nnU-Net_STU-Net_H', 'nnU-Net_MedNeXt', 'nnU-Net_STU-Net_L']",DKFZ
+nnU-Net_STU-Net_H,0.9714924693107604,0.42 - 0.99,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'nnU-Net_UniSeg', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'nnU-Net_NexToU', 'nnU-Net_STU-Net_B', '_Diff-UNet', 'nnU-Net_U-Net']",Collecting Data
+_MedFormer,0.9538889825344086,0.52 - 0.97,"['MONAI_SegVol', 'nnU-Net_NexToU']",Collecting Data
+nnU-Net_MedNeXt,0.9729034602642059,0.01 - 0.99,"['nnU-Net_ResEncL', 'nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L']",DKFZ
+MONAI_UNETR,0.8098437786102295,0.00 - 0.97,[],NVIDIA
+Vision_Language_Swin_UNETR_CLIP,0.9633506536483765,0.00 - 0.98,"['nnU-Net_UniSeg', 'nnU-Net_NexToU']",CityU
+MONAI_SegVol,0.9573581218719482,0.00 - 0.98,"['_MedFormer', 'nnU-Net_NexToU']",BAAI
+MONAI_UCTransNet,0.9552479684352876,0.00 - 0.99,[],CityU
+nnU-Net_NexToU,0.9656655788421631,0.00 - 0.99,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'nnU-Net_UniSeg', 'nnU-Net_STU-Net_H', '_MedFormer', 'Vision_Language_Swin_UNETR_CLIP', 'MONAI_SegVol', 'nnU-Net_STU-Net_L']",HIT
+_SAM-Adapter,0.6291083097457886,0.00 - 0.94,[],Duke
+nnU-Net_STU-Net_L,0.9718517065048218,0.12 - 0.99,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'nnU-Net_NexToU', 'nnU-Net_STU-Net_B', '_Diff-UNet', 'nnU-Net_U-Net']",Collecting Data
+nnU-Net_STU-Net_B,0.971939742565155,0.37 - 0.99,"['nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L', 'nnU-Net_U-Net']",Collecting Data
+_Diff-UNet,0.9700790643692018,0.00 - 0.99,"['nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L']",HKUST
+MONAI_Swin_UNETR,0.8621917366981506,0.00 - 0.97,[],NVIDIA
+nnU-Net_U-Net,0.9720653593540192,0.25 - 0.99,"['nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L', 'nnU-Net_STU-Net_B']",N/A

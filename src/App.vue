@@ -17,7 +17,7 @@
         <label>Choose Class：</label>
         <select v-model="selectedClass" @change="debouncedLoadData">
           <option v-for="category in categories" :key="category" :value="category">
-            {{ category }}
+            {{ category === 'mean' ? 'Overall' : category }}
           </option>
         </select>
       </div>
@@ -58,8 +58,9 @@ export default {
     return {
       selectedDataset: "dapatlas_results", // 默认数据集
       selectedScoreType: "dsc", // 默认分数类型
-      selectedClass: "aorta", // 默认类别
+      selectedClass: "mean", // 默认类别
       categories: [
+        "mean",
         "aorta",
         "gall_bladder",
         "kidney_left",
@@ -80,7 +81,7 @@ export default {
   methods: {
     loadData() {
       this.isLoading = true; // 开始加载
-      const filePath = `${import.meta.env.BASE_URL}${this.selectedDataset}/${this.selectedScoreType.toLowerCase()}/${this.selectedClass}_summary.csv`;
+      const filePath = `${import.meta.env.BASE_URL}${this.selectedDataset}/${this.selectedScoreType.toLowerCase()}/${this.selectedClass}_table.csv`;
       console.log("加载文件路径:", filePath);
 
       Papa.parse(filePath, {
@@ -96,7 +97,7 @@ export default {
             this.tableData = [];
           } else {
             this.tableData = result.data
-              .filter((row) => row.Model)
+              .filter((row) => row.Model_name)
               // .sort((a, b) => parseFloat(b.Mean) - parseFloat(a.Mean));
               .sort((a, b) => parseFloat(b.Median) - parseFloat(a.Median)); // 按分数降序排序
             console.log("tableData:", this.tableData);
@@ -121,63 +122,112 @@ export default {
 /* 页面整体样式 */
 #app {
   font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f4f4f9;
+  color: #dcdcdc; /* 浅灰色文字 */
+  background-color: #000; /* 全页面黑色背景 */
   padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* 让内容横向铺满页面 */
+  height: 100%; /* 让内容垂直铺满页面 */
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 表格样式调整 */
+table {
+  width: 100%; /* 表格铺满页面宽度 */
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #1a1a1a; /* 深黑色表格背景 */
+  color: #fff; /* 白色文字 */
+  border: 1px solid #333; /* 表格边框 */
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* 标题样式 */
 h1 {
   text-align: center;
-  color: #2a2a2a;
+  color: #f5f5f5; /* 更亮的灰白色 */
+  margin-bottom: 20px; /* 标题和其他元素之间的间距 */
 }
 
 /* 控制面板样式 */
 .control-panel {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-direction: column; /* 纵向排列 */
+  gap: 15px; /* 元素间距 */
+  padding: 15px;
+  background-color: #1e1e1e; /* 深灰色背景 */
+  border: 1px solid #333; /* 边框颜色 */
+  border-radius: 8px; /* 圆角边框 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* 浅阴影 */
 }
 
 .form-row {
   display: flex;
   align-items: center;
-  margin: 10px;
+  justify-content: space-between; /* 左右对齐 */
   width: 100%;
 }
 
 label {
-  width: 120px;
-  margin-right: 10px;
+  color: #f5f5f5; /* 白色文字 */
   font-size: 16px;
-  color: #444;
 }
 
 select {
   flex: 1;
   padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #444; /* 深灰边框 */
+  border-radius: 6px;
   font-size: 14px;
-  background-color: #fff;
-  color: #333;
+  background-color: #2b2b2b; /* 黑灰色背景 */
+  color: #fff; /* 白色文字 */
 }
 
 select:focus {
-  border-color: #888;
+  border-color: #666; /* 更亮的灰色边框 */
   outline: none;
+  background-color: #3b3b3b; /* 聚焦时的背景色 */
 }
 
 /* 加载状态 */
 .loading {
   text-align: center;
   font-size: 18px;
-  color: #555;
+  color: #ffcc00; /* 黄色提示文字 */
   margin: 20px 0;
 }
+
+/* 表格组件样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #1a1a1a; /* 表格深黑背景 */
+  color: #fff; /* 白色文字 */
+  border: 1px solid #333; /* 表格边框 */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #333; /* 单元格边框 */
+}
+
+th {
+  background-color: #2b2b2b; /* 表头深灰背景 */
+  color: #ffcc00; /* 黄色文字 */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1e1e1e; /* 偶数行深灰色 */
+}
+
+tbody tr:hover {
+  background-color: #333333; /* 悬停时颜色 */
+}
+
 </style>

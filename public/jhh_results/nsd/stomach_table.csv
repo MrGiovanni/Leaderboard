@@ -1,0 +1,20 @@
+Model_name,Median,95% CI,Likely_models,organization
+UNETR,0.5471553802490234,0.28 - 0.74,[],NVIDIA
+U-Net_CLIP,0.7221218347549438,0.43 - 0.86,"['NexToU', 'Swin_UNETR_CLIP', 'nnU-Net_ResEncL', 'nnU-Net U-Net', 'STU-Net B']",CityU
+Diff-UNet,0.7103830575942993,0.43 - 0.86,[],HKUST
+LHU-Net,0.715440958738327,0.42 - 0.86,[],UR
+NexToU,0.7249898314476013,0.41 - 0.87,"['U-Net_CLIP', 'Swin_UNETR_CLIP', 'nnU-Net U-Net', 'STU-Net B']",HIT
+Swin_UNETR_CLIP,0.7273217439651489,0.41 - 0.86,"['U-Net_CLIP', 'NexToU', 'nnU-Net_ResEncL', 'nnU-Net U-Net', 'STU-Net B']",CityU
+STU-Net H,0.74950110912323,0.45 - 0.89,[],Shanghai AI Lab
+nnU-Net_ResEncL,0.7303891181945801,0.45 - 0.88,"['U-Net_CLIP', 'Swin_UNETR_CLIP', 'STU-Net B']",DKFZ
+SegVol,0.7024390697479248,0.40 - 0.86,[],BAAI
+UNEST,0.6299937963485718,0.37 - 0.79,[],NVIDIA
+MedNeXt,0.7381018400192261,0.45 - 0.88,['STU-Net L'],DKFZ
+nnU-Net U-Net,0.7259171009063721,0.44 - 0.87,"['U-Net_CLIP', 'NexToU', 'Swin_UNETR_CLIP', 'STU-Net B']",N/A
+MedFormer,0.756248950958252,0.45 - 0.89,[],Rutgers
+Swin_UNETR,0.6311465501785278,0.34 - 0.80,[],Collecting Data
+STU-Net B,0.7294753193855286,0.43 - 0.88,"['U-Net_CLIP', 'NexToU', 'Swin_UNETR_CLIP', 'nnU-Net_ResEncL', 'nnU-Net U-Net']",Collecting Data
+STU-Net L,0.741512656211853,0.44 - 0.89,['MedNeXt'],Collecting Data
+UCTransNet,0.5263110399246216,0.22 - 0.74,[],Collecting Data
+UniSeg,0.7476249933242798,0.47 - 0.88,[],NPU
+SAM-Adapter,0.49552521109580994,0.23 - 0.65,[],Duke

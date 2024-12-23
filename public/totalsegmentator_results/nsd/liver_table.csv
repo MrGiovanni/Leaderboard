@@ -1,0 +1,20 @@
+Model_name,Median,95% CI,Likely_models,organization
+MONAI_UNEST,0.8329416513442993,0.06 - 0.94,['MONAI_UCTransNet'],NVIDIA
+MONAI_LHU-Net,0.8997975587844849,0.00 - 0.98,"['Vision_Language_U-Net_CLIP', '_MedFormer', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU']",UR
+Vision_Language_U-Net_CLIP,0.8876716494560242,0.31 - 0.97,"['MONAI_LHU-Net', '_MedFormer', 'Vision_Language_Swin_UNETR_CLIP']",CityU
+nnU-Net_UniSeg,0.9121453166007996,0.08 - 0.97,[],Collecting Data
+nnU-Net_ResEncL,0.9213957190513612,0.01 - 0.98,"['nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L', 'nnU-Net_STU-Net_B', 'nnU-Net_U-Net']",DKFZ
+nnU-Net_STU-Net_H,0.9271475374698639,0.28 - 0.98,"['nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'nnU-Net_STU-Net_B', 'nnU-Net_U-Net']",Collecting Data
+_MedFormer,0.8873018622398376,0.21 - 0.96,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU']",Collecting Data
+nnU-Net_MedNeXt,0.9262908101081848,0.16 - 0.98,"['nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L']",DKFZ
+MONAI_UNETR,0.6624333262443542,0.00 - 0.87,[],NVIDIA
+Vision_Language_Swin_UNETR_CLIP,0.8968427181243896,0.19 - 0.97,"['MONAI_LHU-Net', 'Vision_Language_U-Net_CLIP', '_MedFormer']",CityU
+MONAI_SegVol,0.8673165440559387,0.00 - 0.96,[],BAAI
+MONAI_UCTransNet,0.8539450764656067,0.00 - 0.97,['MONAI_UNEST'],CityU
+nnU-Net_NexToU,0.8933065533638,0.02 - 0.97,"['MONAI_LHU-Net', '_MedFormer']",HIT
+_SAM-Adapter,0.4505200684070587,0.00 - 0.84,[],Duke
+nnU-Net_STU-Net_L,0.9297964870929718,0.38 - 0.98,"['nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'nnU-Net_STU-Net_B', 'nnU-Net_U-Net']",Collecting Data
+nnU-Net_STU-Net_B,0.9265794157981871,0.23 - 0.98,"['nnU-Net_ResEncL', 'nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L', 'nnU-Net_U-Net']",Collecting Data
+_Diff-UNet,0.9104572534561156,0.27 - 0.98,[],HKUST
+MONAI_Swin_UNETR,0.7670792937278748,0.00 - 0.92,[],NVIDIA
+nnU-Net_U-Net,0.9213294386863708,0.32 - 0.98,"['nnU-Net_ResEncL', 'nnU-Net_STU-Net_H', 'nnU-Net_STU-Net_L', 'nnU-Net_STU-Net_B']",N/A
