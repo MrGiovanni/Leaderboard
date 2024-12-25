@@ -1,6 +1,5 @@
 <template>
     <div>
-      <h3>{{ title }}</h3>
       <!-- 数据表格 -->
       <table v-if="data.length > 0">
         <thead>
@@ -110,13 +109,21 @@
   <style scoped>
 /* 整体页面样式 */
 div {
-  font-family: Arial, sans-serif;
-  color: #060303; /* 浅灰文字颜色 */
+  font-family: Arial, sans-serif; /* 字体样式 */
+  color: #dcdcdc; /* 浅灰文字颜色 */
   background-color: #1e1e1e; /* 深色背景 */
-  padding: 20px;
-  min-height: 100vh;
-  max-width: 100%;
-  box-sizing: border-box;
+  padding: 20px 20px; /* 内边距 */
+  min-height: 100vh; /* 最小高度覆盖整个视口 */
+  width: 2500px; /* 横向填满页面 */
+  max-width: 100%; /* 最大宽度自适应页面 */
+  box-sizing: border-box; /* 包括内边距和边框在宽高计算中 */
+  border: 1px solid #333; /* 边框颜色 */
+  border-radius: 8px; /* 圆角边框 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* 添加阴影 */
+  margin: 0 auto; /* 居中显示 */
+  display: flex; /* 使用弹性布局 */
+  flex-direction: column; /* 垂直排列子元素 */
+  gap: 15px; /* 子元素间距 */
 }
 
 h3 {
@@ -129,14 +136,18 @@ h3 {
 /* 表格样式 */
 table {
   border-collapse: collapse;
-  width: auto;
-  margin: 0 auto;
   background-color: transparent; /* 表格背景颜色 */
+  height: auto;
   border: 1px solid #444;
   border-radius: 8px; /* 圆角边框 */
   overflow: hidden; /* 隐藏溢出边角 */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* 阴影效果 */
 }
+
+tr {
+  height: 50px; /* 设置每一行的高度为 50px */
+}
+
 
 th, td {
   border: 1px solid #444;
@@ -196,28 +207,6 @@ tr.highlighted {
   color: #333333 !important;
   font-weight: bold; /* 加粗文字 */
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-select, label {
-  display: block;
-  margin: 10px auto;
-  font-size: 14px;
-  color: #f0f0f0;
-}
-
-select {
-  width: 50%;
-  padding: 8px 12px;
-  background-color: #2a2a2a;
-  color: #ffffff;
-  border: 1px solid #444;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-}
-
-select:hover {
-  border-color: #888;
 }
 
 p {
