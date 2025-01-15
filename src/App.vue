@@ -26,12 +26,12 @@
     <div style="font-family: Arial, sans-serif; color: #dcdcdc; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
       <h1>Touchstone Benchmark Leaderboard</h1>
       <p>
-        This webpage showcases the <strong>Touchstone Benchmark leaderboard</strong>, which evaluates the performance of various models across different organs. The leaderboard utilizes three datasets, as shown below:
+        This webpage showcases the <strong>Touchstone Benchmark leaderboard</strong>, which evaluates the performance of various models across different organs. The leaderboard utilizes two datasets, as shown below:
       </p>
       <ul>
         <li>Proprietary <a href="https://www.sciencedirect.com/science/article/pii/S2211568419301391" style="color: #1e90ff;">JHH dataset</a> (<em>N=5,172</em>)</li>
         <li>Public <a href="https://github.com/wasserth/TotalSegmentator" style="color: #1e90ff;">TotalSegmentator V2 dataset</a> (<em>N=1,228</em>)</li>
-        <li>Public <a href="https://github.com/alexanderjaus/AtlasDataset" style="color: #1e90ff;">DAP Atlas dataset</a> (<em>N=533</em>)</li>
+        <!-- <li>Public <a href="https://github.com/alexanderjaus/AtlasDataset" style="color: #1e90ff;">DAP Atlas dataset</a> (<em>N=533</em>)</li> -->
       </ul>
       <p>
         Two scoring metrics are used for the evaluation:
