@@ -51,7 +51,7 @@
       <div class="form-row">
         <label>Category</label>
         <select v-model="selectedDataset" @change="debouncedLoadData">
-          <option value="dapatlas_results">Dapatlas Results</option>
+          <!-- <option value="dapatlas_results">Dapatlas Results</option> -->
           <option value="jhh_results">JHH Results</option>
           <option value="totalsegmentator_results">TotalSegmentator Results</option>
         </select>
@@ -102,7 +102,7 @@ export default {
   },
   data() {
     return {
-      selectedDataset: "dapatlas_results", // 默认数据集
+      selectedDataset: "jhh_results", // 默认数据集
       selectedScoreType: "dsc", // 默认分数类型
       selectedClass: "mean", // 默认类别
       categories: [
