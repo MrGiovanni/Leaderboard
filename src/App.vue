@@ -42,6 +42,7 @@
       </ul>
       <p>
         Additionally, the leaderboard highlights models that show <strong>no significant differences</strong> in performance for specific tasks. These models are visually marked with <span style="background-color: #deb334; color: black;">yellow highlights</span> to provide clear comparisons.
+        Since the data does not follow a normal distribution, the Wilcoxon paired test is used and a p-value greater than 0.05 is considered indicative of no significant difference.
       </p>
     </div>
     <br>
