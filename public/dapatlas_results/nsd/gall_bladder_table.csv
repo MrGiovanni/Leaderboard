@@ -1,16 +1,16 @@
 Model_name,Median,95% CI,Likely_models,organization
-MONAI_UNEST,0.5856996476650238,0.00 - 0.82,[],NVIDIA
-MONAI_LHU-Net,0.7937736809253693,0.00 - 0.92,"['nnU-Net_STU-Net', 'nnU-Net_ResEncL', '_Diff-UNet']",UR
-Vision_Language_U-Net_CLIP,0.7229422926902771,0.00 - 0.87,['MONAI_SegVol'],CityU
-nnU-Net_STU-Net,0.7714673280715942,0.00 - 0.91,"['MONAI_LHU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'MONAI_UCTransNet', 'nnU-Net_NexToU', '_Diff-UNet', 'nnU-Net_U-Net']",Shanghai AI Lab
-nnU-Net_ResEncL,0.7833161652088165,0.00 - 0.91,"['MONAI_LHU-Net', 'nnU-Net_STU-Net', 'nnU-Net_NexToU']",DKFZ
-nnU-Net_MedNeXt,0.7759984731674194,0.00 - 0.92,"['nnU-Net_STU-Net', 'nnU-Net_NexToU', 'nnU-Net_U-Net']",DKFZ
-MONAI_UNETR,0.24565100669860834,0.00 - 0.57,[],NVIDIA
-Vision_Language_Swin_UNETR_CLIP,0.7074974477291107,0.00 - 0.87,[],CityU
-MONAI_SegVol,0.7233057022094727,0.00 - 0.89,['Vision_Language_U-Net_CLIP'],BAAI
-MONAI_UCTransNet,0.7397651076316833,0.00 - 0.93,['nnU-Net_STU-Net'],CityU
-nnU-Net_NexToU,0.7721213400363922,0.00 - 0.92,"['nnU-Net_STU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt']",HIT
-_SAM-Adapter,0.0986385270953178,0.00 - 0.25,[],Duke
-_Diff-UNet,0.7825990319252014,0.00 - 0.92,"['MONAI_LHU-Net', 'nnU-Net_STU-Net']",HKUST
-MONAI_Swin_UNETR,0.6018328964710236,0.00 - 0.84,[],NVIDIA
-nnU-Net_U-Net,0.7725978493690491,0.00 - 0.91,"['nnU-Net_STU-Net', 'nnU-Net_MedNeXt']",N/A
+MONAI_UNEST,0.5856996476650238,0.0 - 82.2,[],NVIDIA
+MONAI_LHU-Net,0.7937736809253693,0.0 - 92.1,"['nnU-Net_STU-Net', 'nnU-Net_ResEncL', '_Diff-UNet']",UR
+Vision_Language_U-Net_CLIP,0.7229422926902771,0.0 - 87.5,['MONAI_SegVol'],CityU
+nnU-Net_STU-Net,0.7714673280715942,0.0 - 90.7,"['MONAI_LHU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt', 'MONAI_UCTransNet', 'nnU-Net_NexToU', '_Diff-UNet', 'nnU-Net_U-Net']",Shanghai AI Lab
+nnU-Net_ResEncL,0.7833161652088165,0.0 - 91.3,"['MONAI_LHU-Net', 'nnU-Net_STU-Net', 'nnU-Net_NexToU']",DKFZ
+nnU-Net_MedNeXt,0.7759984731674194,0.0 - 92.4,"['nnU-Net_STU-Net', 'nnU-Net_NexToU', 'nnU-Net_U-Net']",DKFZ
+MONAI_UNETR,0.24565100669860834,0.0 - 56.6,[],NVIDIA
+Vision_Language_Swin_UNETR_CLIP,0.7074974477291107,0.0 - 87.2,[],CityU
+MONAI_SegVol,0.7233057022094727,0.0 - 88.9,['Vision_Language_U-Net_CLIP'],BAAI
+MONAI_UCTransNet,0.7397651076316833,0.0 - 93.0,['nnU-Net_STU-Net'],CityU
+nnU-Net_NexToU,0.7721213400363922,0.0 - 92.0,"['nnU-Net_STU-Net', 'nnU-Net_ResEncL', 'nnU-Net_MedNeXt']",HIT
+_SAM-Adapter,0.0986385270953178,0.0 - 25.1,[],Duke
+_Diff-UNet,0.7825990319252014,0.0 - 92.4,"['MONAI_LHU-Net', 'nnU-Net_STU-Net']",HKUST
+MONAI_Swin_UNETR,0.6018328964710236,0.0 - 84.1,[],NVIDIA
+nnU-Net_U-Net,0.7725978493690491,0.0 - 91.0,"['nnU-Net_STU-Net', 'nnU-Net_MedNeXt']",N/A

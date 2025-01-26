@@ -1,16 +1,16 @@
 Model_name,Median,95% CI,Likely_models,organization
-MONAI_UNEST,0.9477614462375641,0.32 - 0.97,[],NVIDIA
-MONAI_LHU-Net,0.9683005213737488,0.93 - 0.98,['nnU-Net_NexToU'],UR
-Vision_Language_U-Net_CLIP,0.9615192711353302,0.91 - 0.97,['Vision_Language_Swin_UNETR_CLIP'],CityU
-nnU-Net_STU-Net,0.9689896106719972,0.94 - 0.98,['nnU-Net_NexToU'],Shanghai AI Lab
-nnU-Net_ResEncL,0.9701996445655823,0.94 - 0.98,"['nnU-Net_MedNeXt', '_Diff-UNet', 'nnU-Net_U-Net']",DKFZ
-nnU-Net_MedNeXt,0.9708672165870667,0.94 - 0.98,"['nnU-Net_ResEncL', 'nnU-Net_U-Net']",DKFZ
-MONAI_UNETR,0.7883907556533813,0.00 - 0.95,[],NVIDIA
-Vision_Language_Swin_UNETR_CLIP,0.9620957970619202,0.88 - 0.97,['Vision_Language_U-Net_CLIP'],CityU
-MONAI_SegVol,0.9668489694595337,0.88 - 0.98,[],BAAI
-MONAI_UCTransNet,0.9552424848079681,0.82 - 0.97,[],CityU
-nnU-Net_NexToU,0.9682299196720123,0.92 - 0.98,"['MONAI_LHU-Net', 'nnU-Net_STU-Net']",HIT
-_SAM-Adapter,0.9092309176921844,0.65 - 0.95,[],Duke
-_Diff-UNet,0.9699998497962952,0.93 - 0.98,"['nnU-Net_ResEncL', 'nnU-Net_U-Net']",HKUST
-MONAI_Swin_UNETR,0.9428063929080963,0.07 - 0.97,[],NVIDIA
-nnU-Net_U-Net,0.9706578850746156,0.92 - 0.98,"['nnU-Net_ResEncL', 'nnU-Net_MedNeXt', '_Diff-UNet']",N/A
+MONAI_UNEST,0.9477614462375641,32.3 - 96.9,[],NVIDIA
+MONAI_LHU-Net,0.9683005213737488,92.7 - 98.0,['nnU-Net_NexToU'],UR
+Vision_Language_U-Net_CLIP,0.9615192711353302,90.5 - 97.2,['Vision_Language_Swin_UNETR_CLIP'],CityU
+nnU-Net_STU-Net,0.9689896106719972,93.8 - 98.0,['nnU-Net_NexToU'],Shanghai AI Lab
+nnU-Net_ResEncL,0.9701996445655823,93.8 - 98.2,"['nnU-Net_MedNeXt', '_Diff-UNet', 'nnU-Net_U-Net']",DKFZ
+nnU-Net_MedNeXt,0.9708672165870667,93.7 - 98.2,"['nnU-Net_ResEncL', 'nnU-Net_U-Net']",DKFZ
+MONAI_UNETR,0.7883907556533813,0.0 - 95.1,[],NVIDIA
+Vision_Language_Swin_UNETR_CLIP,0.9620957970619202,87.6 - 97.3,['Vision_Language_U-Net_CLIP'],CityU
+MONAI_SegVol,0.9668489694595337,88.3 - 97.9,[],BAAI
+MONAI_UCTransNet,0.9552424848079681,81.8 - 97.2,[],CityU
+nnU-Net_NexToU,0.9682299196720123,91.7 - 98.0,"['MONAI_LHU-Net', 'nnU-Net_STU-Net']",HIT
+_SAM-Adapter,0.9092309176921844,65.0 - 94.7,[],Duke
+_Diff-UNet,0.9699998497962952,92.9 - 98.1,"['nnU-Net_ResEncL', 'nnU-Net_U-Net']",HKUST
+MONAI_Swin_UNETR,0.9428063929080963,7.2 - 96.6,[],NVIDIA
+nnU-Net_U-Net,0.9706578850746156,91.6 - 98.2,"['nnU-Net_ResEncL', 'nnU-Net_MedNeXt', '_Diff-UNet']",N/A

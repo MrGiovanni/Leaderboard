@@ -1,16 +1,16 @@
 Model_name,Median,95% CI,Likely_models,organization
-MONAI_UNEST,0.8354942202568054,0.46 - 0.92,[],NVIDIA
-MONAI_LHU-Net,0.9083420932292938,0.76 - 0.95,['Vision_Language_U-Net_CLIP'],UR
-Vision_Language_U-Net_CLIP,0.9069003462791443,0.79 - 0.95,['MONAI_LHU-Net'],CityU
-nnU-Net_STU-Net,0.911506712436676,0.81 - 0.95,"['nnU-Net_MedNeXt', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU', 'nnU-Net_U-Net']",Shanghai AI Lab
-nnU-Net_ResEncL,0.915973722934723,0.82 - 0.96,['nnU-Net_MedNeXt'],DKFZ
-nnU-Net_MedNeXt,0.9139876067638397,0.82 - 0.95,"['nnU-Net_STU-Net', 'nnU-Net_ResEncL']",DKFZ
-MONAI_UNETR,0.5798761546611786,0.00 - 0.87,[],NVIDIA
-Vision_Language_Swin_UNETR_CLIP,0.9131503701210022,0.77 - 0.96,"['nnU-Net_STU-Net', 'nnU-Net_NexToU']",CityU
-MONAI_SegVol,0.8989114463329315,0.71 - 0.95,[],BAAI
-MONAI_UCTransNet,0.8635852932929993,0.61 - 0.95,[],CityU
-nnU-Net_NexToU,0.9098248183727264,0.79 - 0.95,"['nnU-Net_STU-Net', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_U-Net']",HIT
-_SAM-Adapter,0.4900661110877991,0.19 - 0.71,[],Duke
-_Diff-UNet,0.9222559630870819,0.79 - 0.96,[],HKUST
-MONAI_Swin_UNETR,0.8142278492450714,0.26 - 0.91,[],NVIDIA
-nnU-Net_U-Net,0.9107573330402374,0.79 - 0.96,"['nnU-Net_STU-Net', 'nnU-Net_NexToU']",N/A
+MONAI_UNEST,0.8354942202568054,45.7 - 92.2,[],NVIDIA
+MONAI_LHU-Net,0.9083420932292938,76.5 - 95.0,['Vision_Language_U-Net_CLIP'],UR
+Vision_Language_U-Net_CLIP,0.9069003462791443,79.1 - 95.4,['MONAI_LHU-Net'],CityU
+nnU-Net_STU-Net,0.911506712436676,81.2 - 95.3,"['nnU-Net_MedNeXt', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_NexToU', 'nnU-Net_U-Net']",Shanghai AI Lab
+nnU-Net_ResEncL,0.915973722934723,81.9 - 95.7,['nnU-Net_MedNeXt'],DKFZ
+nnU-Net_MedNeXt,0.9139876067638397,81.6 - 95.4,"['nnU-Net_STU-Net', 'nnU-Net_ResEncL']",DKFZ
+MONAI_UNETR,0.5798761546611786,0.0 - 87.1,[],NVIDIA
+Vision_Language_Swin_UNETR_CLIP,0.9131503701210022,77.0 - 96.1,"['nnU-Net_STU-Net', 'nnU-Net_NexToU']",CityU
+MONAI_SegVol,0.8989114463329315,70.8 - 94.8,[],BAAI
+MONAI_UCTransNet,0.8635852932929993,60.8 - 94.7,[],CityU
+nnU-Net_NexToU,0.9098248183727264,78.6 - 94.9,"['nnU-Net_STU-Net', 'Vision_Language_Swin_UNETR_CLIP', 'nnU-Net_U-Net']",HIT
+_SAM-Adapter,0.4900661110877991,19.4 - 71.4,[],Duke
+_Diff-UNet,0.9222559630870819,79.2 - 95.6,[],HKUST
+MONAI_Swin_UNETR,0.8142278492450714,25.6 - 91.1,[],NVIDIA
+nnU-Net_U-Net,0.9107573330402374,79.5 - 95.6,"['nnU-Net_STU-Net', 'nnU-Net_NexToU']",N/A
