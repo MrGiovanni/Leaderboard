@@ -171,7 +171,7 @@ export default {
 #app {
   font-family: Arial, sans-serif;
   color: #dcdcdc; /* 浅灰色文字 */
-  background-color: #1e1e1e;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px; /* 内边距 */
   width: 2500px; /* 横向填满页面 */
   height: 100%; /* 垂直填满页面 */
