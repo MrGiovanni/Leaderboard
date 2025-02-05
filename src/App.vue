@@ -47,17 +47,30 @@
     </div>
     <br>
 
+    <!-- 新增分析按钮 -->
+    <div class="analysis-button-container">
+      <button @click="showAnalysis = !showAnalysis">Show Cofunder Analysis</button>
+    </div>
+
+    <!-- 图片展示区域 -->
+    <div v-if="showAnalysis" class="analysis-images">
+      <img src="/cofunders/jhh_age.png" alt="Analysis Graph 1">
+      <img src="/cofunders/totalsegmentator_age.png" alt="Analysis Graph 1">
+      <img src="/cofunders/dapatlas_age.png" alt="Analysis Graph 1">
+      <img src="/cofunders/jhh_sex.png" alt="Analysis Graph 1">
+      <img src="/cofunders/totalsegmentator_sex.png" alt="Analysis Graph 1">
+      <img src="/cofunders/dapatlas_sex.png" alt="Analysis Graph 1">
+    </div>
+
     <!-- 控制面板 -->
-    <div class="control-panel">
+     <div class="control-panel">
       <div class="form-row">
         <label>Choose Dataset</label>
         <select v-model="selectedDataset" @change="debouncedLoadData">
-          <!-- <option value="dapatlas_results">Dapatlas Results</option> -->
           <option value="jhh_results">JHH Results</option>
           <option value="totalsegmentator_results">TotalSegmentator Results</option>
         </select>
       </div>
-
 
       <div class="form-row">
         <label>Choose Organs</label>
@@ -106,6 +119,7 @@ export default {
       selectedDataset: "jhh_results", // 默认数据集
       selectedScoreType: "dsc", // 默认分数类型
       selectedClass: "mean", // 默认类别
+      showAnalysis: false,
       categories: [
         "mean",
         "aorta",
@@ -266,5 +280,48 @@ select:focus {
   color: #ffcc00; /* 黄色提示文字 */
   margin: 20px 0;
 }
+
+.analysis-button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.analysis-button-container button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.analysis-button-container button:hover {
+  background-color: #0077cc;
+}
+
+.analysis-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* 调整图片间距 */
+  margin-top: 20px;
+  flex-wrap: wrap; /* 允许多张图片自动换行 */
+}
+
+.analysis-images img {
+  width: 80%; /* 让图片填充 80% 的屏幕宽度 */
+  max-width: 1200px; /* 限制最大宽度，避免过度放大 */
+  height: auto; /* 保持图片比例 */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 增强阴影效果 */
+  transition: transform 0.3s ease-in-out; /* 添加放大动画 */
+}
+
+.analysis-images img:hover {
+  transform: scale(1.05); /* 鼠标悬停时放大 5% */
+}
+
+
 
 </style>
