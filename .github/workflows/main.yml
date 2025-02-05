@@ -28,13 +28,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      # 检出代码
+      # 检出代码仓库
       - name: Checkout repository
-        uses: actions/checkout@v4  # 更新为最新版本
+        uses: actions/checkout@v4
 
       # 设置 Node.js 环境
       - name: Set up Node.js
-        uses: actions/setup-node@v4  # 更新为最新版本
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
@@ -53,16 +53,16 @@ jobs:
 
       # 配置 GitHub Pages 环境
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@v4  # 更新为最新版本
+        uses: actions/configure-pages@v4
 
-      # 上传构建产物
+      # 使用最新版本上传 artifact
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1  # 使用正确版本，不涉及 v3 问题
+        uses: actions/upload-artifact@v4  # 强制指定最新版本
         with:
-          # 指定构建文件路径
+          name: dist
           path: './dist'
 
       # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2  # 更新为最新版本
+        uses: actions/deploy-pages@v2
