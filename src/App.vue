@@ -1,327 +1,657 @@
 <template>
   <div id="app">
-    <h1>Visualization of TouchStone Experiment Results</h1>
-    <div>
-      <a class="iconItem" data-tip="Github" target="_blank" href="https://github.com/MrGiovanni/Touchstone">
-        <svg t="1704870335945" class="icon" viewBox="0 0 1024 1024" version="1.1"
-            xmlns="http://www.w3.org/2000/svg" p-id="2487" width="22px" height="22px">
-            <path
-                d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9 23.5 23.2 38.1 55.4 38.1 91v112.5c0.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"
-                fill="#FFFFFF" p-id="2488"></path>
-
-        </svg>
+    <!-- Header Links -->
+    <header class="header-links">
+      <a
+        class="iconItem"
+        data-tip="GitHub"
+        target="_blank"
+        href="https://github.com/MrGiovanni/Touchstone"
+      >
+        <img
+          src="@/assets/github.png"
+          alt="GitHub Logo"
+          class="icon"
+          width="22"
+          height="22"
+        />
       </a>
-      <a class="iconItem" data-tip="Mail" target="_blank" href="mailto:zhaozeyu9185@gmail.com">
-        <svg t="1704870588438" class="icon" viewBox="0 0 1024 1024" version="1.1"
-            xmlns="http://www.w3.org/2000/svg" p-id="3174" width="22px" height="22px">
-            <path
-                d="M926.47619 355.644952V780.190476a73.142857 73.142857 0 0 1-73.142857 73.142857H170.666667a73.142857 73.142857 0 0 1-73.142857-73.142857V355.644952l304.103619 257.828572a170.666667 170.666667 0 0 0 220.745142 0L926.47619 355.644952zM853.333333 170.666667a74.044952 74.044952 0 0 1 26.087619 4.778666 72.704 72.704 0 0 1 30.622477 22.186667 73.508571 73.508571 0 0 1 10.678857 17.67619c3.169524 7.509333 5.12 15.652571 5.607619 24.210286L926.47619 243.809524v24.380952L559.469714 581.241905a73.142857 73.142857 0 0 1-91.306666 2.901333l-3.632762-2.925714L97.52381 268.190476v-24.380952a72.899048 72.899048 0 0 1 40.155428-65.292191A72.97219 72.97219 0 0 1 170.666667 170.666667h682.666666z"
-                fill="#FFFFFF" p-id="3175"></path>
-        </svg>
+      <a
+        class="iconItem"
+        data-tip="Mail"
+        target="_blank"
+        href="mailto:zhaozeyu9185@gmail.com"
+      >
+        <img
+          src="@/assets/email.png"
+          alt="Email Logo"
+          class="icon"
+          width="22"
+          height="22"
+        />
       </a>
-    </div>
+    </header>
 
-    <br>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- Stars (Bubble Effect) -->
+      <Stars :numStars="150" />
+      <div class="hero-content">
+        <h1 class="hero-title">Touchstone Benchmark Leaderboard</h1>
+        <div class="hero-description">
+          <p>
+            Dive into our <strong>Touchstone Benchmark leaderboard</strong>,
+            which evaluates the performance of various models across different
+            organs.
+            <br />
+            The leaderboard utilizes two datasets, as shown below.
+          </p>
+        </div>
+        <div class="hero-button-group">
+          <a
+            class="btn btn-primary"
+            href="https://www.sciencedirect.com/science/article/pii/S2211568419301391"
+            target="_blank"
+          >
+            Proprietary JHH dataset (N=5,172)
+          </a>
+          <a
+            class="btn btn-primary"
+            href="https://github.com/wasserth/TotalSegmentator"
+            target="_blank"
+          >
+            Public TotalSegmentator V2 dataset (N=1,228)
+          </a>
+        </div>
 
-    <div style="font-family: Arial, sans-serif; color: #dcdcdc; background-color: #1e1e1e; padding: 20px; border-radius: 8px;">
-      <h1>Touchstone Benchmark Leaderboard</h1>
-      <p>
-        This webpage showcases the <strong>Touchstone Benchmark leaderboard</strong>, which evaluates the performance of various models across different organs. The leaderboard utilizes two datasets, as shown below:
-      </p>
-      <ul>
-        <li>Proprietary <a href="https://www.sciencedirect.com/science/article/pii/S2211568419301391" style="color: #1e90ff;">JHH dataset</a> (<em>N=5,172</em>)</li>
-        <li>Public <a href="https://github.com/wasserth/TotalSegmentator" style="color: #1e90ff;">TotalSegmentator V2 dataset</a> (<em>N=1,228</em>)</li>
-        <!-- <li>Public <a href="https://github.com/alexanderjaus/AtlasDataset" style="color: #1e90ff;">DAP Atlas dataset</a> (<em>N=533</em>)</li> -->
-      </ul>
-      <p>
-        Two scoring metrics are used for the evaluation:
-      </p>
-      <ul>
-        <li><strong>DSC (Dice Similarity Coefficient)</strong>: A commonly used metric for segmentation accuracy.</li>
-        <li><strong>NSD (Normalized Surface Dice)</strong>: A metric that assesses the boundary alignment of the segmentation.</li>
-      </ul>
-      <p>
-        Additionally, the leaderboard highlights models that show <strong>no significant differences</strong> in performance for specific tasks. These models are visually marked with <span style="background-color: #deb334; color: black;">yellow highlights</span> to provide clear comparisons.
-        Since the data does not follow a normal distribution, the Wilcoxon paired test is used and a p-value greater than 0.05 is considered indicative of no significant difference.
-      </p>
-    </div>
-    <br>
+        <!-- Marquee with Models -->
+        <div class="marquee-container">
+          <div class="marquee-title">
+            <p>Evaluate <strong>15+ models</strong> across organs.</p>
+          </div>
+          <div class="marquee-content">
+            <div
+              v-for="(model, index) in models"
+              :key="index"
+              class="model-box"
+            >
+              <span class="model-name">{{ model }}</span>
+            </div>
+            <div
+              v-for="(model, index) in models"
+              :key="'dup-' + index"
+              class="model-box"
+            >
+              <span class="model-icon">🤖</span>
+              <span class="model-name">{{ model }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- 新增分析按钮 -->
-    <div class="analysis-button-container">
-      <button @click="showAnalysis = !showAnalysis">Show Cofunder Analysis</button>
-    </div>
-
-    <!-- 图片展示区域 -->
-    <div v-if="showAnalysis" class="analysis-images">
-      <img src="/cofunders/jhh_age.png" alt="Analysis Graph 1">
-      <img src="/cofunders/totalsegmentator_age.png" alt="Analysis Graph 1">
-      <img src="/cofunders/dapatlas_age.png" alt="Analysis Graph 1">
-      <img src="/cofunders/jhh_sex.png" alt="Analysis Graph 1">
-      <img src="/cofunders/totalsegmentator_sex.png" alt="Analysis Graph 1">
-      <img src="/cofunders/dapatlas_sex.png" alt="Analysis Graph 1">
-    </div>
-
-    <!-- 控制面板 -->
-     <div class="control-panel">
-      <div class="form-row">
-        <label>Choose Dataset</label>
-        <select v-model="selectedDataset" @change="debouncedLoadData">
-          <option value="jhh_results">JHH Results</option>
-          <option value="totalsegmentator_results">TotalSegmentator Results</option>
-        </select>
+    <!-- Info Boxes -->
+    <div class="info-boxes">
+      <!-- Box 1: Chart -->
+      <div class="info-box box1">
+        <div class="chart-wrapper">
+          <BarChart :chart-data="chartData" :chart-options="chartOptions" />
+        </div>
       </div>
 
-      <div class="form-row">
-        <label>Choose Organs</label>
-        <select v-model="selectedClass" @change="debouncedLoadData">
-          <option v-for="category in categories" :key="category" :value="category">
-            {{ category === 'mean' ? 'Overall' : category }}
-          </option>
-        </select>
-      </div>
-
-      <div class="form-row">
-        <label>Choose Score Type</label>
-        <select v-model="selectedScoreType" @change="debouncedLoadData">
-          <option value="dsc">DSC</option>
-          <option value="nsd">NSD</option>
-        </select>
+      <!-- Box 2: Additional Info -->
+      <div class="info-box box2">
+        <p class="text-detail">
+          <h2>Leaders</h2>
+          <p><strong>MedNeXT</strong> and <strong>MedFormer</strong>, based on our scoring methodology, these models
+          scored both <strong>90.0</strong>. We measured performance using <strong>DSC</strong> and <strong>NSD</strong>. Data being non-parametric, we apply <strong>the Wilcoxon paired test</strong>
+          . A p-value above 0.05 indicates no significant difference.
+          </p>
+        </p>
       </div>
     </div>
 
-    <!-- 加载状态 -->
-    <div v-if="isLoading" class="loading">
-      Loading, waiting please...
+    <!-- Control Panel with Dropdowns -->
+    <div class="control-panel">
+      <div class="form-row">
+        <label for="dataset-select">Choose Dataset</label>
+        <AnimatedDropdown v-model="selectedDataset" :options="datasetOptions" />
+      </div>
+      <div class="form-row">
+        <label for="organ-select">Choose Organs</label>
+        <AnimatedDropdown v-model="selectedClass" :options="organOptions" />
+      </div>
+      <div class="form-row">
+        <label for="score-select">Choose Score Type</label>
+        <AnimatedDropdown
+          v-model="selectedScoreType"
+          :options="scoreTypeOptions"
+        />
+      </div>
     </div>
-    
 
-    <!-- 表格组件 -->
-    <HighlightTable
-      v-else
-      :data="tableData"
-      :scoreType="selectedScoreType"
-    />
+    <!-- Loading Indicator -->
+    <div v-if="isLoading" class="loading">Loading, please wait...</div>
+
+    <!-- Data Table -->
+    <HighlightTable v-else :data="tableData" :scoreType="selectedScoreType" />
+
+    <!-- Visitor Count -->
+    <!-- <footer class="visitor-counter">Visitors: {{ visitorCount }}</footer> -->
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, watch, onMounted, computed } from "vue";
 import Papa from "papaparse";
+import { debounce } from "lodash-es";
+
+// Import components
+import AnimatedDropdown from "./components/AnimatedDropdown.vue";
 import HighlightTable from "./components/HighlightTable.vue";
-import _ from "lodash";
+import BarChart from "./components/BarChart.vue";
 
-export default {
-  components: {
-    HighlightTable,
-  },
-  data() {
-    return {
-      selectedDataset: "jhh_results", // 默认数据集
-      selectedScoreType: "dsc", // 默认分数类型
-      selectedClass: "mean", // 默认类别
-      showAnalysis: false,
-      categories: [
-        "mean",
-        "aorta",
-        "gall_bladder",
-        "kidney_left",
-        "kidney_right",
-        "liver",
-        "pancreas",
-        "postcava",
-        "spleen",
-        "stomach",
-      ],
-      tableData: [], // 存储表格数据
-      isLoading: false, // 加载状态
-    };
-  },
-  mounted() {
-    this.loadData();
-  },
-  methods: {
-    loadData() {
-      this.isLoading = true; // 开始加载
-      const filePath = `${import.meta.env.BASE_URL}${this.selectedDataset}/${this.selectedScoreType.toLowerCase()}/${this.selectedClass}_table.csv`;
-      console.log("加载文件路径:", filePath);
+// Sample models for the marquee
+const models = ref([
+  "MedNeXt",
+  "MedFormer",
+  "STU-Net B",
+  "STU-Net H",
+  "nnU-Net U-Net",
+  "STU-Net L",
+  "nnU-Net_ResEncL",
+  "UniSeg",
+  "Diff-UNet",
+  "NexToU",
+  "LHU-Net",
+  "SegVol",
+  "U-Net_CLIP",
+  "Swin_UNETR_CLIP",
+  "Swin_UNETR",
+  "UNEST",
+  "UNETR",
+  "UCTransNet",
+  "SAM-Adapter",
+]);
 
-      Papa.parse(filePath, {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        transform: (value) => (value === undefined ? "" : value),
-        complete: (result) => {
-          this.isLoading = false; // 完成加载
-          if (result.errors.length > 0) {
-            console.error("CSV 文件解析错误:", result.errors);
-            alert("无法加载文件，请检查路径是否正确");
-            this.tableData = [];
-          } else {
-            this.tableData = result.data
-              .filter((row) => row.Model_name)
-              // .sort((a, b) => parseFloat(b.Mean) - parseFloat(a.Mean));
-              .sort((a, b) => parseFloat(b.Median) - parseFloat(a.Median)); // 按分数降序排序
-            console.log("tableData:", this.tableData);
-          }
-        },
-        error: (error) => {
-          this.isLoading = false;
-          console.error("加载文件失败:", error.message);
-          alert("加载文件失败，请检查文件路径！");
-          this.tableData = [];
-        },
-      });
+// Raw scores for the chart
+const rawScores = [
+  { name: "MedNeXt", score: 90.0, color: "#FF6E7F" },
+  { name: "MedFormer", score: 90.0, color: "#F76C85" },
+  { name: "STU-Net B", score: 89.9, color: "#ffc3ca" },
+  { name: "STU-Net H", score: 89.8, color: "#ffc3ca" },
+  { name: "nnU-Net U-Net", score: 89.8, color: "#ffc3ca" },
+];
+
+// Computed chart data for Chart.js
+const chartData = computed(() => ({
+  labels: rawScores.map((item) => item.name),
+  datasets: [
+    {
+      label: "DSC",
+      data: rawScores.map((item) => item.score),
+      backgroundColor: rawScores.map((item) => item.color),
+      borderColor: rawScores.map((item) => item.color),
+      borderWidth: 1,
     },
-    debouncedLoadData: _.debounce(function () {
-      this.loadData();
-    }, 300),
+  ],
+}));
+
+// Chart options
+const chartOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+    },
+    y: {
+      beginAtZero: true,
+      suggestedMax: 100,
+      grid: {
+        display: false,
+      },
+    },
   },
 };
+
+// State variables for dropdowns and table
+const selectedDataset = ref("jhh_results");
+const selectedClass = ref("mean");
+const selectedScoreType = ref("dsc");
+const visitorCount = ref(0);
+const tableData = ref([]);
+const isLoading = ref(false);
+
+// Dropdown options
+const datasetOptions = [
+  { value: "jhh_results", label: "JHH Results" },
+  { value: "totalsegmentator_results", label: "TotalSegmentator Results" },
+];
+
+const organOptions = [
+  { value: "mean", label: "Overall" },
+  { value: "aorta", label: "Aorta" },
+  { value: "gall_bladder", label: "Gall Bladder" },
+  { value: "kidney_left", label: "Kidney Left" },
+  { value: "kidney_right", label: "Kidney Right" },
+  { value: "liver", label: "Liver" },
+  { value: "pancreas", label: "Pancreas" },
+  { value: "postcava", label: "Postcava" },
+  { value: "spleen", label: "Spleen" },
+  { value: "stomach", label: "Stomach" },
+];
+
+const scoreTypeOptions = [
+  { value: "dsc", label: "DSC" },
+  { value: "nsd", label: "NSD" },
+];
+
+// CSV loading function using Papa Parse
+const loadData = () => {
+  isLoading.value = true;
+  const filePath = `${import.meta.env.BASE_URL}${
+    selectedDataset.value
+  }/${selectedScoreType.value.toLowerCase()}/${selectedClass.value}_table.csv`;
+  console.log("Loading file:", filePath);
+  Papa.parse(filePath, {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    transform: (value) => (value === undefined ? "" : value),
+    complete: (result) => {
+      isLoading.value = false;
+      if (result.errors.length > 0) {
+        console.error("CSV parsing errors:", result.errors);
+        alert("Unable to load file. Please check the file path.");
+        tableData.value = [];
+      } else {
+        tableData.value = result.data
+          .filter((row) => row.Model_name)
+          .map((row) => {
+            row.Model_name = row.Model_name.replace(/^_+/, "");
+            return row;
+          })
+          .sort((a, b) => parseFloat(b.Median) - parseFloat(a.Median));
+      }
+    },
+    error: (error) => {
+      isLoading.value = false;
+      console.error("Error loading file:", error.message);
+      alert("Failed to load file. Please check the file path.");
+      tableData.value = [];
+    },
+  });
+};
+
+const debouncedLoadData = debounce(loadData, 300);
+
+watch([selectedDataset, selectedClass, selectedScoreType], () => {
+  debouncedLoadData();
+});
+
+// Increment visitor count using countapi
+const incrementVisitorCount = () => {
+  fetch(
+    "https://api.countapi.xyz/hit/mrgiovanni.github.io/Leaderboard/visitors"
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      visitorCount.value = data.value;
+    })
+    .catch((error) => console.error("Error updating visitor count:", error));
+};
+
+onMounted(() => {
+  loadData();
+  incrementVisitorCount();
+});
 </script>
 
 <style scoped>
-
-/* 页面整体样式 */
+/* Global App Styles */
 #app {
-  font-family: Arial, sans-serif;
-  color: #dcdcdc; /* 浅灰色文字 */
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px; /* 内边距 */
-  width: 2500px; /* 横向填满页面 */
-  height: 100%; /* 垂直填满页面 */
-  min-height: 100vh; /* 确保即使页面内容较少时也填满视口高度 */
-  margin: 0; /* 去掉默认外边距 */
-  box-sizing: border-box; /* 包括内边距和边框在宽高计算中 */
-  display: flex; /* 使用 Flex 布局便于内部元素居中或排列 */
-  flex-direction: column; /* 子元素按列排列 */
+  background-color: #ffffff;
+  color: #333333;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 5px;
 }
 
-
-/* 标题样式 */
-h1 {
-  text-align: left;
-  color: #f5f5f5; /* 更亮的灰白色 */
-  margin-bottom: 20px; /* 标题和其他元素之间的间距 */
+/* Header Links */
+.header-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.iconItem {
+  text-decoration: none;
+}
+.icon {
+  display: block;
 }
 
-/* 控制面板样式 */
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  min-height: 550px;
+  margin-left: calc(50% - 50vw);
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, #ff6e7f 0%, #c54ffb 50%, #5ac8fa 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.hero-description {
+  width: 100%;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+.hero-button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0.3rem;
+}
+.btn-primary {
+  background: linear-gradient(to bottom, #217aff 0%, #1c64d1 100%);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+.btn-secondary {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Marquee Styles */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 40px;
+}
+.marquee-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.marquee-content {
+  display: flex;
+  gap: 16px;
+  animation: scroll 30s linear infinite;
+  white-space: nowrap;
+}
+.model-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f9fa;
+  border-radius: 50px;
+  padding: 6px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1e;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(255, 110, 127, 0.45),
+    0 6px 16px rgba(197, 79, 251, 0.35), 0 8px 18px rgba(90, 200, 250, 0.3);
+}
+.model-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+.model-icon {
+  font-size: 20px;
+}
+
+.info-boxes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.info-box.box1 {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(255, 110, 127, 0.45),
+    0 6px 16px rgba(197, 79, 251, 0.35), 0 8px 18px rgba(90, 200, 250, 0.3);
+}
+
+.info-box.box2 {
+  background-color: #ffffff; /* White background */
+  border-radius: 16px; /* Rounded corners */
+  padding: 24px; /* Padding for spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 450px; /* Restrict max width */
+  text-align: left; /* Left-aligned text */
+}
+
+/* Title Styling */
+.info-box.box2 h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Paragraph/Text Styling */
+.info-box.box2 .text-detail {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .info-box.box2 {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .info-box.box1 {
+    width: 65%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
+  .chart-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-box.box1 canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .info-box.box2 {
+    width: 30%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .info-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-box {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.info-box.box1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(255, 110, 127, 0.45),
+    0 8px 18px rgba(197, 79, 251, 0.35), 0 10px 20px rgba(90, 200, 250, 0.3);
+}
+
+/* Control Panel */
 .control-panel {
   display: flex;
-  flex-direction: row; /* 横向排列 */
-  gap: 15px; /* 子元素间距 */
-  padding: 15px;
-  background-color: #1e1e1e; /* 深灰色背景 */
-  border: 1px solid #333; /* 边框颜色 */
-  border-radius: 8px; /* 圆角边框 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* 浅阴影 */
-  width: 100%; /* 宽度自适应页面 */
-  margin: 0 auto; /* 居中显示 */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
-
 .form-row {
   display: flex;
-  flex-direction: column; /* 标签和下拉框垂直排列 */
-  justify-content: space-between;
-  padding: 15px; /* 内边距，给框内容留空间 */
-  border: 1px solid #333; /* 边框颜色 */
-  border-radius: 8px; /* 圆角边框 */
-  background-color: #2a2a2a; /* 深灰色背景 */
-  color: #ffffff; /* 白色字体 */
-  width: 200px; /* 固定宽度 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+  flex-direction: column;
 }
-
 .form-row label {
-  color: #ffffff;
+  margin-bottom: 5px;
   font-size: 14px;
-  margin-bottom: 0; /* 避免垂直对齐问题 */
-  text-align: left; /* 左对齐 */
 }
 
-.form-row select {
-  background-color: #4a4a4a;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px;
-  font-size: 14px;
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  width: 80%; /* 可调整宽度，确保样式整齐 */
-}
-
-
-label {
-  color: #f5f5f5; /* 白色文字 */
-  font-size: 16px;
-}
-
-select {
-  flex: 1;
-  padding: 8px 12px;
-  border: 1px solid #444; /* 深灰边框 */
-  border-radius: 6px;
-  font-size: 14px;
-  background-color: #2b2b2b; /* 黑灰色背景 */
-  color: #fff; /* 白色文字 */
-}
-
-select:focus {
-  border-color: #666; /* 更亮的灰色边框 */
-  outline: none;
-  background-color: #3b3b3b; /* 聚焦时的背景色 */
-}
-
-/* 加载状态 */
+/* Loading Indicator */
 .loading {
   text-align: center;
   font-size: 18px;
-  color: #ffcc00; /* 黄色提示文字 */
+  color: #007aff;
   margin: 20px 0;
 }
 
-.analysis-button-container {
+/* Visitor Counter */
+.visitor-counter {
+  margin-top: 40px;
   text-align: center;
-  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #007aff;
 }
 
-.analysis-button-container button {
-  background-color: #1e90ff;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.analysis-button-container button:hover {
-  background-color: #0077cc;
-}
-
-.analysis-images {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* 调整图片间距 */
-  margin-top: 20px;
-  flex-wrap: wrap; /* 允许多张图片自动换行 */
-}
-
-.analysis-images img {
-  width: 80%; /* 让图片填充 80% 的屏幕宽度 */
-  max-width: 1200px; /* 限制最大宽度，避免过度放大 */
-  height: auto; /* 保持图片比例 */
+/* Data Table Styles */
+::v-deep table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  text-align: center;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 增强阴影效果 */
-  transition: transform 0.3s ease-in-out; /* 添加放大动画 */
+  overflow: hidden;
+  box-shadow: none;
+}
+::v-deep tbody tr {
+  transition: transform 0.2s ease-in-out;
+}
+::v-deep tbody tr:hover {
+  transform: scale(1.02);
+  position: relative;
+  z-index: 1;
+}
+::v-deep thead th {
+  background-color: #f8485c;
+  color: #fff;
+  padding: 12px 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+}
+::v-deep tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+::v-deep table th:nth-child(1),
+::v-deep table td:nth-child(1),
+::v-deep table th:nth-child(2),
+::v-deep table td:nth-child(2),
+::v-deep table th:nth-child(3),
+::v-deep table td:nth-child(3),
+::v-deep table th:nth-child(4),
+::v-deep table td:nth-child(4),
+::v-deep table th:nth-child(5) {
+  text-align: center;
 }
 
-.analysis-images img:hover {
-  transform: scale(1.05); /* 鼠标悬停时放大 5% */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#app > * {
+  animation: slideUp 0.5s ease-out;
 }
 
+/* Marquee Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+</style>
 
-
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+}
 </style>
